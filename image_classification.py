@@ -212,6 +212,7 @@ for fn in tqdm_notebook(testfiles):
 predict = model.predict(np.asarray(test_img))
 
 # In [20]
+def mask2rle_img(img):
     tmp = np.rot90( np.flipud( img ), k=3 )
     rle = []
     lastColor = 0;
